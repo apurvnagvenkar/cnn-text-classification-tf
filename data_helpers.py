@@ -76,7 +76,7 @@ def get_datasets_mrpolarity(positive_data_file, negative_data_file):
     datasets['target_names'] = ['positive_examples', 'negative_examples']
     return datasets
 
-def get_binary_detection(data_file,):
+def get_datasets_binary_detection(data_file):
     """
     Loads MR polarity data from files, splits the data into words and generates labels.
     Returns split sentences and labels.
