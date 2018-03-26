@@ -56,6 +56,9 @@ if FLAGS.eval_train:
                                               categories=cfg["datasets"][dataset_name]["categories"],
                                               shuffle=cfg["datasets"][dataset_name]["shuffle"],
                                               random_state=cfg["datasets"][dataset_name]["random_state"])
+    elif dataset_name == "binary_detection":
+        datasets = data_helpers.get_datasets_binary_detection(cfg["datasets"][dataset_name]["test"]["path"])
+
     x_raw, y_test = data_helpers.load_data_labels(datasets)
     y_test = np.argmax(y_test, axis=1)
     print("Total number of test examples: {}".format(len(y_test)))

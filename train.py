@@ -73,7 +73,7 @@ elif dataset_name == "localdata":
                                                      shuffle=cfg["datasets"][dataset_name]["shuffle"],
                                                      random_state=cfg["datasets"][dataset_name]["random_state"])
 elif dataset_name == "binary_detection":
-    datasets = data_helpers.get_datasets_binary_detection(cfg["datasets"][dataset_name]["path"])
+    datasets = data_helpers.get_datasets_binary_detection(cfg["datasets"][dataset_name]["train"]["path"])
 
 
 x_text, y = data_helpers.load_data_labels(datasets)

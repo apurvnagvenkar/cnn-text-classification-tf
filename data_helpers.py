@@ -92,7 +92,7 @@ def get_datasets_binary_detection(data_file):
     datasets = dict()
     datasets['data'] = dataset
     datasets['target'] = target
-    datasets['target_names'] = ['positive_examples', 'negative_examples']
+    datasets['target_names'] = ['negative_examples', 'postive_example']
     return datasets
 
 
