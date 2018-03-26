@@ -14,6 +14,9 @@ word_embeddings:
 datasets:
   # Support currently 3 datasets: mrpolarity, 20newsgroup and localdata
   default: 20newsgroup
+  binary_detection:
+    path: ""
+    info: "data path label text"
   mrpolarity:
     positive_data_file:
       path: "data/rt-polaritydata/rt-polarity.pos"

@@ -76,6 +76,25 @@ def get_datasets_mrpolarity(positive_data_file, negative_data_file):
     datasets['target_names'] = ['positive_examples', 'negative_examples']
     return datasets
 
+def get_binary_detection(data_file,):
+    """
+    Loads MR polarity data from files, splits the data into words and generates labels.
+    Returns split sentences and labels.
+    """
+    # Load data from files
+    data_examples = list(open(data_file, "r").readlines())
+    target = []
+    dataset = []
+    for tuple in data_examples:
+        target.append(tuple.split()[0])
+        dataset.append(' '.join(tuple.split()[1:]).strip())
+
+    datasets = dict()
+    datasets['data'] = dataset
+    datasets['target'] = target
+    datasets['target_names'] = ['positive_examples', 'negative_examples']
+    return datasets
+
 
 def get_datasets_localdata(container_path=None, categories=None, load_content=True,
                        encoding='utf-8', shuffle=True, random_state=42):
