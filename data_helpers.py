@@ -86,7 +86,7 @@ def get_datasets_binary_detection(data_file):
     target = []
     dataset = []
     for tuple in data_examples:
-        target.append(tuple.split()[0])
+        target.append(int(tuple.split()[0]))
         dataset.append(' '.join(tuple.split()[1:]).strip())
 
     datasets = dict()
