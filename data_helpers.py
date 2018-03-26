@@ -133,7 +133,7 @@ def load_embedding_vectors_word2vec(vocabulary, filename, binary):
                         raise EOFError("unexpected end of input; is count incorrect or file otherwise damaged?")
                     if ch != b'\n':
                         word.append(ch)
-                word = str(b''.join(word), encoding=encoding, errors='strict')
+                word = str(b''.join(word))
                 idx = vocabulary.get(word)
                 if idx != 0:
                     embedding_vectors[idx] = np.fromstring(f.read(binary_len), dtype='float32')
